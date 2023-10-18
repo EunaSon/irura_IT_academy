@@ -8,34 +8,40 @@
   request.setCharacterEncoding("utf-8");
 %>
 <!DOCTYPE html>
+<!--
+	Dopetrope by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
 <html>
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width">
+<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
 <link href="${contextPath}/resources/css/main.css" rel="stylesheet" type="text/css" media="screen">
-<link href="${contextPath}/resources/css/basic-jquery-slider.css" rel="stylesheet" type="text/css" media="screen">
-<link href="${contextPath}/resources/css/mobile.css" rel="stylesheet" type="text/css">
+<!--  <link href="https://hangeul.pstatic.net/hangeul_static/css/nanum-gothic.css" rel="stylesheet">
+-->
 <title><tiles:insertAttribute name="title" /></title>
 </head>
-<body>
-	<div id="outer_wrap">
-		<div id="wrap">
-			<header>
-				 <tiles:insertAttribute name="header" />
-			</header>
-			<div class="clear"></div>
-			<aside>
-				 <tiles:insertAttribute name="side" />
-			</aside>
-			<article>
-			 	<tiles:insertAttribute name="body" />
-			</article>
-			<div class="clear"></div>
-			<footer>
-        		<tiles:insertAttribute name="footer" />
-        	</footer>
-		</div>
-		 <tiles:insertAttribute name="quickMenu" />
+<body class="homepage is-preload">
+	<div id="page-wrapper">
+		<header>
+			 <tiles:insertAttribute name="header" />
+		</header>
+		<article>
+		 	<tiles:insertAttribute name="body" />
+		</article>
+		<footer>
+       		<tiles:insertAttribute name="footer" />
+       	</footer>
     </div>
+    
+    <!-- Scripts -->
+	<script src="${contextPath}/resources/js/jquery.min.js"></script>
+	<script src="${contextPath}/resources/js/jquery.dropotron.min.js"></script>
+	<script src="${contextPath}/resources/js/browser.min.js"></script>
+	<script src="${contextPath}/resources/js/breakpoints.min.js"></script>
+	<script src="${contextPath}/resources/js/util.js"></script>
+	<script src="${contextPath}/resources/js/main.js"></script>
+	<script src="https://kit.fontawesome.com/7e0d69709e.js" crossorigin="anonymous"></script>
 </body>
 </html>

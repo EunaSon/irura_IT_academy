@@ -167,6 +167,11 @@
 			<artifactId>spring-jdbc</artifactId>
 			<version>${org.springframework-version}</version>
 		</dependency> 
+		<dependency><!-- sqlSessionFactory 만들때 없으면 에러남 -->
+            <groupId>cglib</groupId>
+            <artifactId>cglib-nodep</artifactId>
+            <version>2.2</version>
+        </dependency>
 		
 		
 		<!--tiles 관련 라이브러리-->
