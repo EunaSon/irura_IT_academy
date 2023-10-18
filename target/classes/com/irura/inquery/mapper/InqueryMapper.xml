@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+   	"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.irura.inquery.mapper.InqueryMapper">
+
+	<insert id="insertSelectKey">
+		<selectKey keyProperty="inqueryNO" resultType="int">
+			select seq_inquery.nextval from dual
+		</selectKey>
+		
+		<![CDATA[
+			INSERT into inquery(inqueryNO,  courseNO, course_sort, course_name, id, name, tel, content, regiDate, status)
+			VALUES(#{inqueryNO}, #{courseNO}, #{course_sort}, #{course_name}, #{id}, #{name}, #{tel}, #{content}, default, default)
+		]]>      
+	</insert>
+
+</mapper>
