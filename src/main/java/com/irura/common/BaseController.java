@@ -9,7 +9,7 @@ import org.springframework.web.servlet.ModelAndView;
 
 public class BaseController {
 	
-	@RequestMapping(value="/*.do" ,method={RequestMethod.POST,RequestMethod.GET})
+	//@RequestMapping(value="/*.do" ,method={RequestMethod.POST,RequestMethod.GET})
 	protected  ModelAndView viewForm(HttpServletRequest request, HttpServletResponse response) throws Exception {
 		String viewName=(String)request.getAttribute("viewName");
 		ModelAndView mav = new ModelAndView(viewName);

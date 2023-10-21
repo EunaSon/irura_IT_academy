@@ -36,6 +36,7 @@
 	
 	<bean id = "sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
 		<property name="dataSource" ref="dataSource"></property>
+		<property name="mapperLocations" value="classpath:mybatis/mappers/*.xml" />
 	</bean>
 	
 	<!-- 트랜잭션 처리를 위한 추가 -->
@@ -52,7 +53,4 @@
 	
 	<tx:annotation-driven/>
 	
-	<mybatis-spring:scan base-package="com.irura.inquery.mapper" />
-	
-		
 </beans>

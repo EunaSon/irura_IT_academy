@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+   	"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="mapper.inquiry">
+
+	<!-- 문의글 등록 -->
+	<insert id="insertNewInquiry">
+		<selectKey keyColumn="course_sort,course_name" keyProperty="course_sort,course_name" resultType="com.irura.inquiry.vo.InquiryVO" order="BEFORE">
+			SELECT course_sort, course_name
+			FROM course
+			WHERE courseNO = #{courseNO}
+		</selectKey>
+		
+		<![CDATA[
+			INSERT into inquiry(inquiryNO,  courseNO, course_sort, course_name, id, name, tel, content, regiDate, status)
+			VALUES(#{inquiryNO}, #{courseNO}, #{course_sort}, #{course_name}, #{id, jdbcType=VARCHAR}, #{name}, #{tel}, #{content}, default, default)
+		]]>      
+	</insert>
+	
+	<select id="selectNewInquiryNO" resultType="int">
+		<![CDATA[
+			SELECT seq_inquiry.nextval from dual
+		]]>
+	</select>
+	
+</mapper>

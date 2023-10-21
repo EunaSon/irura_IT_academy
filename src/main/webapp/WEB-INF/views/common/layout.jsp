@@ -42,6 +42,7 @@
 	<script src="${contextPath}/resources/js/breakpoints.min.js"></script>
 	<script src="${contextPath}/resources/js/util.js"></script>
 	<script src="${contextPath}/resources/js/main.js"></script>
+	<script src="${contextPath}/resources/js/etc.js"></script>
 	<script src="https://kit.fontawesome.com/7e0d69709e.js" crossorigin="anonymous"></script>
 </body>
 </html>

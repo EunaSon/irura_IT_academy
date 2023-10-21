@@ -10,7 +10,7 @@
 	<div id="member">
 		<a href="#" class="member-button" id="admin_page">Admin Page</a>
 		<a href="#" class="button-button" id="my_page">My Page</a>
-		<a href="#" class="member-button">login</a>
+		<a href="#" class="member-button">Login</a>
 		<a href="#" class="member-button">SignUp</a>
 	</div>
 	
@@ -34,7 +34,7 @@
 				</ul>
 			</li>
 			<li><a href="#">공지사항</a>
-			<li id="inquery"><a href="${contextPath}/inquery/inqueryForm.do">온라인상담</a>
+			<li id="inquiry"><a href="${contextPath}/inquiry/inquiryForm.do">온라인상담</a>
 		</ul>
 	</nav>
 	
